@@ -1,0 +1,42 @@
+
+
+
+body {
+    background-image: url(images/th.jpg);
+    background-size: 1200px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.about-section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 5px;
+    color: white;
+    letter-spacing: 2px;
+}
+.ul li{
+    margin: 1px;
+    padding: 20px;
+    background-color: rgb(0, 0, 0);
+}
+
+h1, h2 {
+    font-family: "Sofia", sans-serif;
+}
+
+ol {
+    padding-left: 20px;
+}
+select{
+    color: white;
+    background: #333;
+    font-family: "Sofia", sans-serif;
+    font-size: 16px;
+}
+option{
+    font-family: "Sofia", sans-serif;
+}

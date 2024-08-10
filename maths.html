@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>calculator</title>
+    <link rel="stylesheet" href="maths.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+</head>
+<body>
+    <nav>
+        <div class="library">digital library</div>
+        <ul class="ul">
+           <li> 
+            <select onchange="window.location.href = this.value;">
+                <option value="#">Select an option</option>
+                <option value="home.html">Home</option>
+                <option value="teacher's guide.html">teacher's guide</option>
+                <option value="general knowledge.html">general knowledge</option>
+              </select>
+           </li>
+           <li><a href="home.html">home</a></li>
+           <li><a href="about.html">about</a></li>
+           <li><a href="services.html">services</a></li>
+           <li><a href="get in.html">Books</a></li>
+           <li><a href="general knowledge.html">GENERAL knowledge</a></li>
+        </ul>
+        </nav>
+
+<B>shadow-multiple</B>
+        <nav>
+    <form>
+        <div class="inlabel">
+        <h1>calculator</h1>
+        <h2>Result:</h2>
+          <div id="result" class="font-effect-outline">
+                          
+          </div>
+        <label for="num1">Number 1:</label>
+        <input id="num1">
+
+        <label for="num2">Number 2:</label>
+        <input id="num2">
+
+        <label for="operator">Operator:</label>
+        <select id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <button type="button" onclick="calculate()">Calculate</button><br>
+
+        <label for="num">Number 3:</label>
+        <input id="num">
+        <select id="notoperator">
+            <option value="√">√</option>
+            <option value="%">%</option>
+            <option value="**">**</option>
+            <option value="∛">∛</option>
+            <option value="***">***</option>
+        </select>
+        <button type="button" onclick="notOperator()">calculate</button>
+      
+        </div>
+    </form>
+</nav>
+
+    <script>
+        function calculate() {
+            var num1 = parseInt(document.getElementById("num1").value);
+            var num2 = parseInt(document.getElementById("num2").value);
+            var operator = document.getElementById("operator").value;
+            var result;
+
+            if (operator === "+") {
+                result = num1 + num2;
+            } else if (operator === "-") {
+                result = num1 - num2;
+            } else if (operator === "*") {
+                result = num1 * num2;
+            } else if (operator === "/") {
+                result = num1 / num2;
+            }
+
+            document.getElementById("result").innerHTML = result;
+        }
+        function notOperator() {
+           var num = parseInt(document.getElementById("num").value);
+           var notoperator = document.getElementById("notoperator").value;
+           var result2;
+
+           if (notoperator === '√'){
+               result2 = Math.sqrt(num);
+           } else if (notoperator === '%'){
+               result2 = num * 0.01
+           } else if (notoperator === '**'){
+               result2 = num * num
+           } else if (notoperator === '∛'){
+               result2 = Math.cbrt(num)
+           } else if (notoperator === '***'){
+               result2 = num * num * num
+           }
+
+           document.getElementById("result").innerHTML = result2;
+
+        }
+       
+    </script>
+</body>
+</html>

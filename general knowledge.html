@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>general knowlegdge</title>
+    <link rel="stylesheet" href="quiz.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+</head>
+<body>
+
+    <div id="quiz"></div>
+    <nav>
+        <div class="library">digital library</div>
+        <ul class="ul">
+            <li> 
+                <select onchange="window.location.href = this.value;">
+                    <option value="#">Select an option</option>
+                    <option value="home.html">Home</option>
+                    <option value="teacher's guide.html">teacher's guide</option>
+                    <option value="general knowledge.html">general knowledge</option>
+                  </select>
+               </li>
+           <li><a href="home.html">home</a></li>
+           <li><a href="about.html">about</a></li>
+           <li><a href="services.html">services</a></li>
+           <li><a href="get in.html">get in</a></li>
+           <li><a href="maths.html">calculator</a></li>
+           <li><a href="general knowledge.html"> General knowledge</a></li>
+        </ul>
+        </nav>
+    <script>
+        const socialScienceQuestions = {
+            "What is the capital of France?": "Paris",
+            "Who wrote 'The Wealth of Nations'?": "Adam Smith",
+            "Who is known as the 'Father of Sociology'?": "Auguste Comte",
+            "Who wrote the book 'Das Kapital'?": "Karl Marx",
+            "What is the study of human societies and social behavior called?": "Sociology",
+            "Who founded psychoanalysis, a clinical method for treating psychopathology through dialogue between a patient and a psychoanalyst?": "Sigmund Freud",
+            "Which civilization is credited with the invention of writing using cuneiform script?": "Sumerians",
+            "Who is considered the founder of modern psychology and established the first psychology research laboratory?": "Wilhelm Wundt",
+            "Who proposed the theory of evolution by natural selection?": "Charles Darwin",
+            "Who wrote 'The Communist Manifesto' with Karl Marx?": "Friedrich Engels",
+            "What is the political theory advocating class war and leading to a society in which all property is publicly owned and each person works and is paid according to their abilities and needs?": "Communism",
+            "Who is known for his theory of cognitive development in children?": "Jean Piaget",
+            "What is the study of the production, distribution, and consumption of goods and services called?": "Economics",
+            "Who wrote 'The Republic', a Socratic dialogue discussing justice and the ideal state?": "Plato",
+            "Which city is considered the birthplace of democracy?": "Athens",
+            "Who was the first woman to win a Nobel Prize and is known for her research on radioactivity?": "Marie Curie",
+            "What is the theory that human development is influenced by factors such as genetics, parenting, experiences, and culture?": "Developmental psychology",
+            "Who is known for his concept of the 'invisible hand' in economics?": "Adam Smith",
+            "Who was the first African-American to become president of the United States?": "Barack Obama",
+            "Who wrote 'The Communist Manifesto'?": "Karl Marx",
+            "Which political ideology advocates for individual freedom and a limited government?": "Libertarianism",
+            "Who is considered the 'Father of Modern Economics' and wrote 'The Wealth of Nations'?": "Adam Smith",
+            "Which country was ruled by the fascist dictataor Benito Mussolini?": "Italy",
+            "Who is known for his theory of psychosexual development in children?": "Sigmund Freud",
+            "What is the economic system where the means of production are owned and controlled by private individuals or corporations?": "Capitalism",
+            "Who was the first woman to fly solo across the Atlantic Ocean?": "Amelia Earhart",
+            "Who is known for his theory of moral development in children?": "Lawrence Kohlberg",
+            "What is the study of the past, particularly human history, called?": "History",
+            "Who was the first woman to serve as Prime Minister of the United Kingdom?": "Margaret Thatcher",
+            "Who was the leader of the Indian independence movement against British rule?": "Mahatma Gandhi",
+            "Who was the first person to orbit the Earth?": "Yuri Gagarin",
+            "What is the system of government in which power is held by the people, typically through elected representatives?": "Democracy",
+            "Who is known for his theory of classical conditioning in psychology?": "Ivan Pavlov",
+            "Which ancient civilization is credited with the invention of democracy?": "Ancient Greece",
+            "Who was the first emperor of unified China and known for his Great Wall?": "Qin Shi Huang",
+            "Who is known as the 'Father of the Constitution' for his role in drafting the United States Constitution?": "James Madison",
+            "What is the economic theory that advocates for government intervention in the economy to promote social welfare?": "Keynesian economics",
+            "Who was the first woman to win a Nobel Prize in Literature?": "Selma Lagerlöf",
+            "Who was the first female Prime Minister of India?": "Indira Gandhi",
+            "Who is known for his theory of operant conditioning in psychology?": "B.F. Skinner",
+            "What is the economic system where the means of production are owned and controlled by the state?": "Socialism",
+            "Who was the first woman to win a Nobel Prize in Chemistry?": "Marie Curie",
+            "Who is known for his theory of relativity?": "Albert Einstein",
+            "Who was the first President of the United States?": "George Washington",
+            "Who is known as the 'Father of Modern Sociology'?": "Émile Durkheim",
+            "What is the term for a government ruled by a king or queen?": "Monarchy",
+            "Who was the leader of the Soviet Union during World War II?": "Joseph Stalin",
+            "Who is known for his theory of cognitive development in children, which includes the concepts of assimilation and accommodation?": "Jean Piaget",
+            "What is the economic theory that argues for minimal government intervention in the economy and emphasizes the importance of free markets?": "Laissez-faire economics",
+            "Who was the first woman to win a Nobel Peace Prize?": "Bertha von Suttner",
+            "Who is known for his theory of psychoanalysis and the concept of the Oedipus complex?": "Sigmund Freud",
+            "What is the powerhouse of the cell?": "Mitochondria",
+            "What is the chemical symbol for water?": "H2O",
+            "What is the nearest star to Earth?": "Sun",
+            "What is the Earth's primary source of energy?": "Sun",
+            "What is the process by which plants make their own food?": "Photosynthesis",
+            "What is the study of the Earth's atmosphere called?": "Meteorology",
+            "What is the smallest unit of matter?": "Atom",
+            "What is the force that pulls objects toward each other?": "Gravity",
+            "What is the process of a liquid turning into a gas at the surface of the liquid?": "Evaporation",
+            "What is the hardest natural substance on Earth?": "Diamond",
+            "What is the basic unit of life?": "Cell",
+            "What is the SI unit of force?": "Newton",
+            "What type of energy is stored in a battery?": "Chemical energy",
+            "Which planet is known as the Red Planet?": "Mars",
+            "What is the study of living organisms called?": "Biology",
+            "What is the name for the lines that run from the North Pole to the South Pole on maps of the Earth?": "Meridians",
+            "What is the chemical symbol for gold?": "Au",
+            "What gas do plants breathe in?": "Carbon dioxide",
+            "What is the process by which plants lose water through small openings in their leaves?": "Transpiration",
+            "What is the chemical symbol for oxygen?": "O2",
+            "What is the speed of light in a vacuum? (in meters per second)": "299,792,458",
+            "What is the largest organ in the human body?": "Skin",
+            "What is the name of the galaxy containing the Earth?": "Milky Way",
+            "What is the densest planet in our solar system?": "Earth",
+            "What is the process by which rocks are broken down into smaller pieces by physical or chemical means?": "Weathering",
+            "What is the chemical symbol for sodium?": "Na",
+            "What is the chemical symbol for potassium?": "K",
+            "What is the study of the composition, structure, and properties of matter and the changes it undergoes called?": "Chemistry",
+            "What is the branch of physics that deals with the behavior of very small particles such as atoms and subatomic particles?": "Quantum mechanics",
+            "What is the study of earthquakes called?": "Seismology",
+            "What is the process by which plants take in carbon dioxide and release oxygen?": "Photosynthesis",
+            "What is the study of the Earth's physical structure and substance called?": "Geology",
+            "What is the chemical symbol for iron?": "Fe",
+            "What is the chemical symbol for silver?": "Ag",
+            "What is the unit of electrical resistance?": "Ohm",
+            "What is the process by which an animal's body changes over time called?": "Metamorphosis",
+            "What is the term for the layer of gases surrounding the Earth?": "Atmosphere",
+            "What is the chemical symbol for carbon?": "C",
+            "What is the branch of science that deals with the study of the universe beyond Earth's atmosphere?": "Astronomy",
+            "What is the force that causes objects to float in water?": "Buoyancy",
+            "What is the largest organ inside the human body?": "Liver",
+            "What is the process by which plants release water vapor into the air through pores in their leaves?": "Transpiration",
+            "What is the chemical symbol for helium?": "He",
+            "What is the chemical symbol for hydrogen?": "H",
+            "What is the study of the behavior and properties of light called?": "Optics",
+            "What is the study of fossils called?": "Paleontology",
+            "What is the process by which plants and other organisms convert light energy into chemical energy?": "Photosynthesis",
+            "What is the process by which rocks are worn away by the action of water, wind, or ice?": "Erosion",
+            "What is the chemical symbol for calcium?": "Ca",
+            "What is the chemical symbol for nitrogen?": "N",
+            "what is the formula of glucose?": "c6h12o6",
+            "what is the formula of sodium cloride?": "Nacl",
+            "what is the capital city of morocco?": "Rabat",
+            "what is the biggest country in africa?": "Algeria",
+            "what is the largest star in the solar system?": "Sun",
+            "what is the longest river in the world?": "Nile river",
+            "A country who have 3 capital citys in africa is": "South africa",
+            "What is he SI unit of temprature?": "kelvin" || "k",
+            "what is the smallest country in the world?": "Vatican city" || "Vatican"
+            // Add more questions and answers here
+        };
+
+        function main() {
+            const questionList = Object.entries(socialScienceQuestions);
+            const numQuestions = questionList.length;
+            let score = 0;
+
+            // Shuffle the questions
+            questionList.sort(() => Math.random() - 0.5);
+
+            const quizContainer = document.getElementById('quiz');
+
+            for (const [question, answer] of questionList) {
+                const userAnswer = prompt(question);
+                if (userAnswer !== null) {
+                    if (userAnswer.trim().toLowerCase() === answer.toLowerCase()) {
+                        score++;
+                        quizContainer.innerHTML += `<p><strong>${question}</strong><br>Correct!</p>`;
+                    } else {
+                        quizContainer.innerHTML += `<p><strong>${question}</strong><br>Incorrect! The correct answer is ${answer}.</p>`;
+                    }
+                } else {
+                    // Handle user cancellation
+                    break;
+                }
+            }
+
+            quizContainer.innerHTML += `<p>general knowledge complete! You got ${score}/${numQuestions} questions correct.</p>`;
+        }
+
+        main();
+    </script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+
+body{
+    background-image: url(images/th.jpg);
+    background-size: 1200px;
+}
+h1{
+    font-family: "Sofia", sans-serif;
+    font-size: 70px;
+    margin-top: 100px;
+    padding: 20px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: cursive;
+    box-sizing: border-box;
+}
+nav{
+    width: 100%;
+    height: 100px;
+    background-color: orangered;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    padding: 0 50px;
+}
+.library{
+    font-size: 29px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+}
+.library:hover{
+    color: yellow;
+}
+.ul{
+   margin: 10px;
+   padding: 10px;
+   display: flex;
+   list-style-type: none;
+}
+.ul li{
+    margin: 1px;
+    padding: 20px;
+    background-color: black;
+
+}
+.ul a{
+    color: antiquewhite;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.ul a:hover{
+    color: yellow;
+    transition: 1.5 ease;
+}
+table,td,th{
+    border: 2px solid aqua;
+    border-collapse: collapse;
+    margin: 200px;
+    padding: 20px;
+    color: orangered;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    font-size: x-large;
+    background: #333;
+}
+th{
+    font-size: xx-large;
+    padding: 40px;
+}
+.a{
+    color: white;
+    background: transparent;
+    text-decoration: none;
+    margin: 100px;
+    padding: 20px;
+    border: 2px solid red;
+    border-radius: 1vh;
+    display: inline-block;
+}
+.a:hover{
+    background: #fff;
+    color: black;
+}
+select{
+    color: white;
+    background: #333;
+    font-family: "Sofia", sans-serif;
+    font-size: 16px;
+}
+option{
+    font-family: "Sofia", sans-serif;
+}
